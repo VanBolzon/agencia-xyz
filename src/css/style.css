@@ -5,11 +5,11 @@ html {
 body {
     display: grid;
     grid-template-areas: 'header header header header'
-                         'hero hero hero hero'
-                         'about about about about'
-                         'services services services services'
-                         'projects projects projects projects'
-                         'footer footer footer footer';
+        'hero hero hero hero'
+        'about about about about'
+        'services services services services'
+        'projects projects projects projects'
+        'footer footer footer footer';
     grid-template-columns: repeat(4, 1fr);
     font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
@@ -68,15 +68,17 @@ body {
 
 @-webkit-keyframes downarrow {
     0% {
-        -webkit-transform: translateY(0); opacity: .4;
+        -webkit-transform: translateY(0);
+        opacity: .4;
     }
 
     100% {
-        -webkit-transform: translateY(.4em); opacity: .9;
+        -webkit-transform: translateY(.4em);
+        opacity: .9;
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .hero {
         height: 60vh;
     }
@@ -89,7 +91,65 @@ body {
 /* ABOUT */
 .about {
     grid-area: about;
-    background-color: crimson;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FFFFFF;
+    max-width: var(--max-width-size);
+    margin: 0 auto;
+}
+
+.about .item {
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-weight: 400;
+}
+
+.about .item h3 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.about .item p {
+    font-size: 1.8rem;
+    margin: 30px 0;
+}
+
+.about .item .btn-know-more {
+    font-size: 1.6rem;
+    align-self: flex-start;
+}
+
+.about .item .btn-know-more:hover {
+    font-weight: 700;
+}
+
+.about .image {
+    height: 100%;
+    width: 100%;
+}
+
+.about .image.right {
+    background: url('../images/bridge.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.about .image.left {
+    background: url('../images/sky.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 426px) {
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+    .about .item {
+        text-align: center;
+    }
 }
 
 /* SERVICES */
