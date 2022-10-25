@@ -1,3 +1,8 @@
 :root {
+    /* MEDIDAS */
     --max-width-size: 1920px;
+
+    /* CORES */
+    --branco: #FFFFFF;
+    --coral: #FF7F50;
 }

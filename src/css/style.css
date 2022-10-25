@@ -19,7 +19,7 @@ body {
 /* HEADER */
 .header {
     grid-area: header;
-    background-color: #FFFFFF;
+    background-color: var(--branco);
 }
 
 .header .header-container {
@@ -37,7 +37,7 @@ body {
 }
 
 .header a:hover h1 {
-    color: coral;
+    color: var(--coral);
 }
 
 /* HERO */
@@ -93,7 +93,7 @@ body {
     grid-area: about;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #FFFFFF;
+    background-color: var(--branco);
     max-width: var(--max-width-size);
     margin: 0 auto;
 }
@@ -115,6 +115,8 @@ body {
 .about .item p {
     font-size: 1.8rem;
     margin: 30px 0;
+    text-align: justify;
+
 }
 
 .about .item .btn-know-more {
@@ -150,6 +152,10 @@ body {
     .about .item {
         text-align: center;
     }
+
+    .about .item .btn-know-more {
+        align-self: center;
+    }
 }
 
 /* SERVICES */
@@ -180,6 +186,7 @@ body {
     max-width: 400px;
     margin: 20px auto 0;
     line-height: 25px;
+    text-align: justify;
 }
 
 .services .service:nth-child(1) {
@@ -241,6 +248,11 @@ body {
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    transition: .3s ease-in-out;
+}
+
+.footer a:hover h4 {
+    color: var(--branco);
 }
 
 .footer nav {
